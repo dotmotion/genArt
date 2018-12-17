@@ -61,7 +61,6 @@ const sketch = () => {
       context.beginPath();
       context.arc(x, y, radius * width, 0, Math.PI * 2);
       context.fillStyle = color;
-      context.lineWidth = 40;
       context.fill();
     });
   };
