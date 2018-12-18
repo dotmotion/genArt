@@ -24,7 +24,7 @@ const sketch = () => {
   // Creating a point grid
   const createGrid = () => {
     const points = [];
-    const count = 120;
+    const count = 100;
 
     for (let x = 0; x < count; x++) {
       for (let y = 0; y < count; y++) {
@@ -52,6 +52,8 @@ const sketch = () => {
     //background
     context.fillStyle = "#16191b";
     context.fillRect(0, 0, width, height);
+    
+    const symbol = "◍";
 
     points.forEach(data => {
       const { 
@@ -71,8 +73,7 @@ const sketch = () => {
       context.font = `${radius * width}px "Helvetica"`
       context.translate(x, y)
       context.rotate(rotation)
-      context.fillText("␥", 0, 0)
-
+      context.fillText(symbol, 0, 0)
       context.restore()
     });
   };
