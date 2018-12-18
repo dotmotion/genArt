@@ -52,6 +52,8 @@ const sketch = () => {
     context.fillStyle = "#16191b";
     context.fillRect(0, 0, width, height);
 
+    const symbol = "⌁";
+
     points.forEach(data => {
       const { 
         position, 
@@ -76,7 +78,7 @@ const sketch = () => {
       context.font = `${radius * width}px "Helvetica"`
       context.translate(x, y)
       context.rotate(rotation)
-      context.fillText("⌁", 0, 0)
+      context.fillText(symbol, 0, 0)
 
       context.restore()
     });
